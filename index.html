@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="bg">
+
+        <div class="flex-container">
+            <div class="item1">
+                <div id="reloj">00:00:00</div>
+            </div>
+            <div class="item2">
+                <div class="titulo">
+                    <h5>AFS - PP UF1305 RELOJ DIGITAL</h5>
+                </div>
+            </div>
+            <div class="item3">
+                <p>
+                    function actualizarReloj() {<br>
+                    &nbsp const ahora = new Date();<br>
+                    &nbsp let horas = ahora.getHours();<br>
+                    &nbsp let minutos = ahora.getMinutes();<br>
+                    &nbsp let segundos = ahora.getSeconds();<br>
+                    &nbsp horas = (horas < 10) ? '0' + horas : horas;<br>
+                        &nbsp minutos=(minutos < 10) ? '0' + minutos : minutos;<br>
+                            &nbsp segundos=(segundos < 10) ? '0' + segundos : segundos; <br>
+                                &nbsp const horaActual=`${horas}:${minutos}:${segundos}`;<br>
+                                document.getElementById('reloj').innerHTML=horaActual;<br>
+                                } <br>
+                                setInterval(actualizarReloj, 1000); <br>
+                                actualizarReloj();<br>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
